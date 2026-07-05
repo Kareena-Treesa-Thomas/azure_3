@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoAI — Your Voice. Our Intelligence.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars" aria-hidden="true"></div>
+    <div class="glow glow-blue" aria-hidden="true"></div>
+    <div class="glow glow-pink" aria-hidden="true"></div>
+
+    <div class="container">
+
+        <header class="topbar">
+            <div class="badge badge-azure">
+                <span class="badge-icon">A</span>
+                <span>Azure AI Speech<br><small>Powered</small></span>
+            </div>
+            <div class="badge badge-status">
+                <span class="dot"></span> Live &nbsp;•&nbsp; Intelligent &nbsp;•&nbsp; Real-time
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="mini-wave" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h1>Echo<span class="ai-grad">AI</span></h1>
+            <p class="tagline">Your voice. Our intelligence. <span class="highlight">Limitless</span> conversations.</p>
+        </section>
+
+        <section class="mascot-stage">
+            <div class="bubble bubble-left">I listen to every word you say...</div>
+            <div class="mascot-wrap">
+                <div id="mascot" class="mascot">
+                    <div class="mascot-ring r1"></div>
+                    <div class="mascot-ring r2"></div>
+                    <div class="mascot-body">
+                        <div class="eye eye-l"></div>
+                        <div class="eye eye-r"></div>
+                        <div class="smile"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bubble bubble-right">...and speaks it back beautifully.</div>
+        </section>
+
+        <main class="panels">
+
+            <section class="panel panel-blue">
+                <div class="panel-icon icon-blue">🎙️</div>
+                <h2>Speech <span class="arrow">→</span> Text</h2>
+                <p class="panel-copy">Speak naturally and watch your words appear in real time.</p>
+
+                <div class="btn-row">
+                    <button id="startBtn" class="btn btn-blue">🎤 Start Listening</button>
+                    <button id="stopBtn" class="btn btn-outline-blue" disabled>⏹ Stop</button>
+                </div>
+
+                <div class="transcript-box">
+                    <div class="transcript-head">
+                        <span><span class="dot dot-green"></span> Live Transcript</span>
+                        <span class="realtime-tag">Real-time 🔊</span>
+                    </div>
+                    <div id="transcript" class="output">Your transcription will appear here...</div>
+                </div>
+            </section>
+
+            <section class="panel panel-pink">
+                <div class="panel-icon icon-pink">🔊</div>
+                <h2>Text <span class="arrow">→</span> Speech</h2>
+                <p class="panel-copy">Type your message and let EchoAI bring it to life.</p>
+
+                <textarea id="ttsInput" maxlength="1000" placeholder="Type something amazing..."></textarea>
+                <div class="char-count"><span id="charCount">0</span> / 1000</div>
+
+                <div class="voice-select-row">
+                    <label for="voiceSelect">Voice</label>
+                    <select id="voiceSelect">
+                        <option value="en-US-GuyNeural">Guy (US, Male)</option>
+                        <option value="en-US-JennyNeural">Jenny (US, Female)</option>
+                        <option value="en-US-AriaNeural">Aria (US, Female)</option>
+                        <option value="en-GB-RyanNeural">Ryan (UK, Male)</option>
+                        <option value="en-GB-SoniaNeural">Sonia (UK, Female)</option>
+                        <option value="en-IN-PrabhatNeural">Prabhat (India, Male)</option>
+                        <option value="en-IN-NeerjaNeural">Neerja (India, Female)</option>
+                        <option value="en-AU-WilliamNeural">William (Australia, Male)</option>
+                        <option value="en-AU-NatashaNeural">Natasha (Australia, Female)</option>
+                    </select>
+                </div>
+
+                <div class="tts-controls">
+                    <button id="speakBtn" class="btn btn-pink">🔊 Speak</button>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p class="powered-by"><span class="badge-icon small">A</span> Powered by <strong>Microsoft Azure AI Speech</strong></p>
+            <p class="footer-sub">Enterprise-grade security. World-class accuracy.</p>
+            <div class="pill-row">
+                <div class="pill">🛡️ Private &amp; Secure</div>
+                <div class="pill">⚡ Real-time</div>
+                <div class="pill">🎯 Highly Accurate</div>
+                <div class="pill">💜 Made with care</div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+    <script src="app.js"></script>
+</body>
+</html>

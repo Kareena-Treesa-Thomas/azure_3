@@ -1,0 +1,16 @@
+{
+  "name": "echoai-main",
+  "version": "1.0.0",
+  "description": "EchoAI Voice Assistant",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "microsoft-cognitiveservices-speech-sdk": "^1.50.0"
+  },
+  "type": "commonjs"
+}
